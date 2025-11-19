@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>KeyCrate — Gestor de contraseñas</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="KeyCrate — Gestor de contraseñas local, cifrado con Fernet. Descarga desde GitHub." />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <svg viewBox="0 0 1200 400" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1">
+              <stop offset="0%" stop-color="#4f46e5" stop-opacity="0.18" />
+              <stop offset="100%" stop-color="#0ea5a3" stop-opacity="0.06" />
+            </linearGradient>
+          </defs>
+          <path d="M0,160 C150,250 350,60 600,120 C850,180 1050,40 1200,120 L1200,400 L0,400 Z" fill="url(#g1)"></path>
+        </svg>
+      </div>
+
+      <div class="container hero-inner">
+        <div class="hero-content reveal-on-scroll">
+          <div class="brand">
+            <div class="logo" aria-hidden="true">
+              <svg width="56" height="56" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="7" width="14" height="10" rx="2" style="fill:var(--panel);opacity:0.12"/>
+                <path d="M7 11a3 3 0 116 0v1h1v4H6v-4h1v-1z" style="fill:var(--accent)"/>
+              </svg>
+            </div>
+            <div>
+              <h1>KeyCrate</h1>
+              <p class="tag" data-i18n="tag">Gestor de contraseñas local y cifrado, sencillo y seguro.</p>
+            </div>
+          </div>
+
+          <div class="cta">
+            <a id="downloadBtn" class="btn primary" href="https://github.com/TheUniverse606/KeyCrate2.0" target="_blank" rel="noopener" data-i18n="download_btn">Descargar desde GitHub</a>
+            <button id="copyBtn" class="btn ghost" data-i18n="copy_btn">Copiar URL del repositorio</button>
+          </div>
+
+          <div class="lang-select">
+            <label for="langSelect" class="sr-only">Idioma</label>
+            <select id="langSelect" aria-label="Seleccionar idioma">
+              <option value="es">Español</option>
+              <option value="en">English</option>
+              <option value="pt">Português</option>
+              <option value="it">Italiano</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="intro reveal-on-scroll">
+        <h2 data-i18n="intro_h2">Protege tus credenciales localmente</h2>
+        <p data-i18n="intro_p">KeyCrate cifra tus entradas con Fernet y guarda los datos en SQLite. Pensado para usuarios que prefieren control total sobre sus contraseñas sin depender de servicios externos.</p>
+      </section>
+
+      <section class="features-grid">
+        <article class="card reveal-on-scroll">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 1v4" stroke="var(--accent-2)" stroke-width="1.5" stroke-linecap="round"/><path d="M5 7h14v10a4 4 0 01-4 4H9a4 4 0 01-4-4V7z" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 data-i18n="feature1">Almacenamiento cifrado</h3>
+          <p data-i18n="feature1_p">Cifrado simétrico con Fernet para mantener tus contraseñas seguras en disco.</p>
+        </article>
+
+        <article class="card reveal-on-scroll">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 12h18" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/><path d="M6 8h.01M6 16h.01M12 8h.01M12 16h.01M18 8h.01M18 16h.01" stroke="var(--accent-2)" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 data-i18n="feature2">Gestión práctica</h3>
+          <p data-i18n="feature2_p">Listar, buscar, generar y copiar contraseñas con una interfaz clara.</p>
+        </article>
+
+        <article class="card reveal-on-scroll">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke="var(--accent)" stroke-width="1.5"/><path d="M8 12c1-2 6-2 7 0" stroke="var(--accent-2)" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 data-i18n="feature3">Ligero y portátil</h3>
+          <p data-i18n="feature3_p">Funcionamiento local con una pequeña base SQLite y sin dependencias remotas.</p>
+        </article>
+
+        <article class="card reveal-on-scroll">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="7" width="14" height="10" rx="2" stroke="var(--accent)" stroke-width="1.5"/><path d="M7 11v1" stroke="var(--accent-2)" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 data-i18n="feature4">Fácil de usar</h3>
+          <p data-i18n="feature4_p">Interfaz basada en `customtkinter` pensada para usuarios no técnicos.</p>
+        </article>
+      </section>
+
+      <section class="howto reveal-on-scroll">
+        <h2 data-i18n="howto_h2">Cómo probarlo</h2>
+        <ol>
+          <li data-i18n="howto1">Haz clic en "Descargar desde GitHub" o copia la URL.</li>
+          <li data-i18n="howto2">Clona el repositorio: <code id="cloneCmd">git clone https://github.com/TheUniverse606/KeyCrate2.0.git</code></li>
+          <li data-i18n="howto3">Sigue el README del proyecto para crear el entorno y ejecutar <code>main.py</code>.</li>
+        </ol>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner reveal-on-scroll">
+        <div>
+          <p class="muted"><span data-i18n="repo_text">Repositorio:</span> <a href="https://github.com/TheUniverse606/KeyCrate2.0" target="_blank" rel="noopener">TheUniverse606/KeyCrate2.0</a></p>
+        </div>
+        <div>
+          <p class="muted" data-i18n="footer_copy">&copy; KeyCrate</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
