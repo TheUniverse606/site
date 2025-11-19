@@ -39,6 +39,7 @@
           <div class="cta">
             <a id="downloadBtn" class="btn primary" href="https://github.com/TheUniverse606/KeyCrate2.0" target="_blank" rel="noopener" data-i18n="download_btn">Descargar desde GitHub</a>
             <button id="copyBtn" class="btn ghost" data-i18n="copy_btn">Copiar URL del repositorio</button>
+            <button id="cvBtn" class="btn ghost" data-i18n="view_cv">Ver CV</button>
           </div>
 
           <div class="lang-select">
@@ -114,6 +115,19 @@
         </div>
       </div>
     </footer>
+
+    <!-- CV Modal -->
+    <div id="cvModalOverlay" class="modal-overlay" aria-hidden="true">
+      <div id="cvModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="cvTitle">
+        <div class="modal-header">
+          <div class="modal-title" id="cvTitle">Curriculum</div>
+          <button id="cvClose" class="modal-close" aria-label="Cerrar">✕</button>
+        </div>
+        <div class="modal-body" id="cvContent">
+          <!-- contenido generado por JS -->
+        </div>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
